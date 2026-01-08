@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SUPER ADMIN - EDITOR</title>
+    <style>
+        body { background: #111; color: #ff3333; font-family: monospace; padding: 50px; }
+        .editor-box { border: 1px dashed #ff3333; padding: 20px; max-width: 600px; margin: 0 auto; }
+        input, select { background: #222; color: #fff; border: 1px solid #ff3333; padding: 10px; width: 100%; margin-bottom: 10px; }
+        .btn-del { background: #ff3333; color: white; border: none; padding: 15px; width: 100%; cursor: pointer; }
+        .btn-add { background: #00ffcc; color: black; border: none; padding: 15px; width: 100%; margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="editor-box">
+        <h2>РУЧНОЕ УПРАВЛЕНИЕ БАЗОЙ</h2>
+        <label>ВЫБРАТЬ НОМЕР ЗАПИСИ ДЛЯ УДАЛЕНИЯ/ИЗМЕНЕНИЯ:</label>
+        <input type="number" id="entryNum" placeholder="№ записи (например, 015)">
+        <button class="btn-del" onclick="alert('Запрос на удаление отправлен в ядро Nano Banana Pro...')">УДАЛИТЬ ВРУЧНУЮ</button>
+        <hr>
+        <label>ДОБАВИТЬ НОВЫЙ СТИЛЬ/ФАЙЛ:</label>
+        <input type="text" placeholder="Название файла">
+        <select>
+            <option>Стиль №6 (Вектор)</option>
+            <option>Стиль №17 (Рендер)</option>
+        </select>
+        <button class="btn-add" onclick="alert('Файл добавлен в очередь синхронизации GitHub')">ДОБАВИТЬ В БАЗУ</button>
+    </div>
+    <p style="text-align:center"><a href="index.html" style="color:#00ffcc">Вернуться к просмотру</a></p>
+</body>
+</html>
