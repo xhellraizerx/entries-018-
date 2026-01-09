@@ -5,93 +5,95 @@
     <title>HELLRAIZER DATABASE - ENTRY 022</title>
     <style>
         body {
-            background-color: #050505;
+            background-color: #000; /* Глубокий черный */
             color: #00ffcc;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Courier New', monospace;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             overflow: hidden;
         }
 
-        .container {
+        /* Контейнер-фиксатор */
+        .viewport {
             position: relative;
-            width: 600px;
-            height: 600px;
+            width: 512px; /* Стандарт генерации */
+            height: 512px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Векторное тело стража */
-        .guardian-body {
+        /* Новый Страж (Монолит) */
+        .guardian-frame {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            z-index: 10;
+            pointer-events: none; /* Чтобы не мешал кликам, если нужно */
         }
 
-        /* Твой рисунок глаза (CAM00081) */
-        .eye-core {
+        /* Твой рисунок глаза из 021 */
+        .eye-source {
             position: absolute;
-            top: 135px; /* Юстировка под пустое пространство головы */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 140px; 
-            height: 140px;
+            width: 160px;  /* Размер под центральное кольцо */
+            height: 160px;
             border-radius: 50%;
-            z-index: 2;
-            box-shadow: 0 0 20px #00ffcc;
             object-fit: cover;
-            border: 2px solid #00ffcc;
-            animation: pulse 4s infinite ease-in-out;
+            z-index: 5;
+            /* Эффект свечения изнутри */
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+            animation: core-pulse 3s infinite ease-in-out;
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 15px #00ffcc; transform: translateX(-50%) scale(1); }
-            50% { box-shadow: 0 0 35px #00ffcc; transform: translateX(-50%) scale(1.05); }
-            100% { box-shadow: 0 0 15px #00ffcc; transform: translateX(-50%) scale(1); }
+        @keyframes core-pulse {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.02); filter: brightness(1.3); }
         }
 
-        .info {
-            margin-top: 20px;
+        .data-panel {
+            margin-top: 30px;
             text-align: center;
-            border: 1px solid #00ffcc;
-            padding: 15px;
+            border-left: 3px solid #00ffcc;
+            padding: 10px 20px;
             background: rgba(0, 255, 204, 0.05);
+            z-index: 20;
         }
 
-        .back-btn {
-            margin-top: 20px;
+        .back-link {
+            margin-top: 15px;
             color: #00ffcc;
             text-decoration: none;
+            font-size: 0.8em;
+            letter-spacing: 2px;
             border: 1px solid #00ffcc;
-            padding: 5px 15px;
-            transition: 0.3s;
+            padding: 5px 10px;
+            transition: all 0.3s;
         }
 
-        .back-btn:hover {
+        .back-link:hover {
             background: #00ffcc;
-            color: #050505;
+            color: #000;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="guardian.png" class="guardian-body" alt="Guardian Vector">
+    <div class="viewport">
+        <img src="../021/CAM00081.jpg" class="eye-source" alt="Core 021">
         
-        <img src="../021/CAM00081.jpg" class="eye-core" alt="The Eye Core">
+        <img src="guardian.png" class="guardian-frame" alt="Guardian 022">
     </div>
 
-    <div class="info">
-        <h2>ОБЪЕКТ №22: ОКУЛЯРНЫЙ СТРАЖ</h2>
-        <p>СТАТУС: СЛИЯНИЕ ЗАВЕРШЕНО | СТИЛЬ №6: ВЕКТОР</p>
+    <div class="data-panel">
+        <div style="font-size: 0.7em;">SYSTEM STATUS: SECURE</div>
+        <div style="font-weight: bold;">ENTRY_022: VECTOR_GUARDIAN</div>
     </div>
 
-    <a href="../../index.html" class="back-btn"><< ВЕРНУТЬСЯ В ТЕРМИНАЛ</a>
+    <a href="../../index.html" class="back-link">RETURN TO MAIN TERMINAL</a>
 
 </body>
 </html>
