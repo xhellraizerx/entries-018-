@@ -1,8 +1,6 @@
 {
   "id": "022",
-  "name": "Окулярный Страж",
-  "style": "№6 Вектор",
-  "status": "Активен",
-  "description": "Сущность, сформированная из чистых линий. Центр фокусировки — первичный взор.",
-  "image": "guardian_vector.png"
+  "title": "Vector Guardian",
+  "style": "6",
+  "path": "entries/022/index.html"
 }
