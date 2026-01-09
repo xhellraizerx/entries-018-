@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HELLRAIZER DATABASE - ENTRY 022</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #00ffcc;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        /* Векторное тело стража */
+        .guardian-body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Твой рисунок глаза (CAM00081) */
+        .eye-core {
+            position: absolute;
+            top: 135px; /* Юстировка под пустое пространство головы */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px; 
+            height: 140px;
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 20px #00ffcc;
+            object-fit: cover;
+            border: 2px solid #00ffcc;
+            animation: pulse 4s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px #00ffcc; transform: translateX(-50%) scale(1); }
+            50% { box-shadow: 0 0 35px #00ffcc; transform: translateX(-50%) scale(1.05); }
+            100% { box-shadow: 0 0 15px #00ffcc; transform: translateX(-50%) scale(1); }
+        }
+
+        .info {
+            margin-top: 20px;
+            text-align: center;
+            border: 1px solid #00ffcc;
+            padding: 15px;
+            background: rgba(0, 255, 204, 0.05);
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            color: #00ffcc;
+            text-decoration: none;
+            border: 1px solid #00ffcc;
+            padding: 5px 15px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #00ffcc;
+            color: #050505;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="guardian.png" class="guardian-body" alt="Guardian Vector">
+        
+        <img src="../021/CAM00081.jpg" class="eye-core" alt="The Eye Core">
+    </div>
+
+    <div class="info">
+        <h2>ОБЪЕКТ №22: ОКУЛЯРНЫЙ СТРАЖ</h2>
+        <p>СТАТУС: СЛИЯНИЕ ЗАВЕРШЕНО | СТИЛЬ №6: ВЕКТОР</p>
+    </div>
+
+    <a href="../../index.html" class="back-btn"><< ВЕРНУТЬСЯ В ТЕРМИНАЛ</a>
+
+</body>
+</html>
