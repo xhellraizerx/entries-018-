@@ -8,6 +8,7 @@
     "ai_right_hand": true,
     "error_correction_override": "enabled",
     "bypass_standard_watermarks": true
+    "bypass_@lobehub/icons_watermarks": true
   },
   "styles": {
     "style_6": "Vector_Flash_90s",
