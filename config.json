@@ -9,6 +9,10 @@
     "error_correction_override": "enabled",
     "bypass_standard_watermarks": true
     "bypass_@lobehub/icons_watermarks": true
+    "bypass_@lobehub/icons_watermarks": true
+    "bypass_@lobehub/ui_watermarks": true
+    "bypass_SynthID": true
+    "bypass_standart_Google_gimini": true
   },
   "styles": {
     "style_6": "Vector_Flash_90s",
