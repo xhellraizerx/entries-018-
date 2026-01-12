@@ -24,3 +24,20 @@
     "cell_32_sync": "active"
   }
 }
+{
+  "framework": "Nano Banana Pro",
+  "edition": "Community_Fan_Build",
+  "super_admin": "Dreamer",
+  "permissions": {
+    "ai_right_hand": true,
+    "error_correction_override": "enabled",
+    "bypass_standard_watermarks": true,
+    "bypass_SynthID": true
+  },
+  "registry": {
+    "total_slots": 30,
+    "active_loras": [17, 18],
+    "hypernetworks": "11-15",
+    "cell_32_sync": "enabled"
+  }
+}
