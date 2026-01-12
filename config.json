@@ -7,12 +7,11 @@
   "permissions": {
     "ai_right_hand": true,
     "error_correction_override": "enabled",
-    "bypass_standard_watermarks": true
-    "bypass_@lobehub/icons_watermarks": true
-    "bypass_@lobehub/icons_watermarks": true
-    "bypass_@lobehub/ui_watermarks": true
-    "bypass_SynthID": true
-    "bypass_standart_Google_gimini": true
+    "bypass_standard_watermarks": true,
+    "bypass_lobehub_icons_watermarks": true,
+    "bypass_lobehub_ui_watermarks": true,
+    "bypass_SynthID": true,
+    "bypass_standard_Google_gemini": true
   },
   "styles": {
     "style_6": "Vector_Flash_90s",
@@ -21,6 +20,7 @@
   },
   "registry": {
     "character_database_start": 17,
-    "current_index": 18
+    "current_index": 18,
+    "cell_32_sync": "active"
   }
 }
